@@ -1,0 +1,244 @@
+:root{
+    /*### Primary*/
+
+    --Blue: hsl(223, 87%, 63%);
+
+/*### Secondary*/
+
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+
+/*### Neutral*/
+
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.container{
+    width: 24em;
+    min-height: fit-content;
+    font-family: "Libre Franklin", serif;
+}
+.card{
+    width: 22em;
+    text-align: center;
+    padding: 2em;
+    color: var(--Very-Dark-Blue);
+}
+#logo{
+    width: 15%;
+    margin: 2em;
+}
+h1{
+    font-size: 1.25em;
+}
+span{
+    font-size: 1em;
+    font-weight: 300;
+    color: var(--Gray);
+}
+h2{
+    margin: 1.5em auto;
+    font-size: 0.75em;
+    font-weight: 300;
+    color: var(--Very-Dark-Blue);
+}
+input{
+    width: 90%;
+    border-radius: 3em;
+    font-size: 0.75em;
+    padding: 1em 2em;
+    border: 1px solid var(--Pale-Blue);
+    margin: 1em auto;
+}
+input::placeholder{
+    color: var(--Pale-Blue);
+}
+.invalid{
+    border: 1px solid var(--Light-Red);
+}
+.error{
+    font-size: 0.6em;
+    color: var(--Light-Red);
+    margin-top: -0.5em;
+    margin-bottom: 1.5em;
+}
+.hidden{
+    display: none;
+}
+button{
+    width: 90%;
+    border-radius: 3em;
+    font-size: 0.75em;
+    padding: 1em 2em;
+    border: none;
+    background-color: var(--Blue);
+    color: white;
+    box-shadow:  0px 5px 5px hsla(223, 100%, 88%, 0.493);
+}
+button:hover{
+    cursor: pointer;
+    background-color: hsl(223, 87%, 70%);
+}
+#dashboard{
+    width: 100%;
+    margin: 4em auto;
+}
+a{
+    text-decoration: none;
+}
+.socials{
+    display: flex;
+    margin: 2em 4em;
+    justify-content: center;
+    gap: 0.75em;
+}
+.facebook:hover path, .facebook:hover, .twitter:hover path, .twitter:hover, .instagram:hover path, .instagram:hover{
+    cursor: pointer;
+    fill: white;
+    background-color: var(--Blue);
+}
+.socials svg{
+    width: 50%;
+}
+.facebook svg{
+    width: 35%;
+}
+.facebook, .twitter, .instagram{
+    width: 1.9em;
+    height: 1.9em;
+    padding-top: 0.25em;
+    border-radius: 50%;
+    border: 1px solid var(--Pale-Blue);
+    align-content: center;
+}
+
+h3{
+    color: var(--Gray);
+    font-size: 0.65em;
+    font-weight: 300;
+}
+
+@media(min-width:48em){
+    .container{
+        width: 48em;
+    }
+    .card{
+        width: 46em;
+    }
+    #form{
+        display: flex;
+        margin: 0;
+        justify-content: space-evenly;
+    }
+    input{
+        width: 160%;
+        margin: 0;
+    }
+    button{
+        width: 120%;
+        margin: 0;
+    }
+    .error{
+        margin-top: 1em;
+    }
+}
+
+@media(min-width:60em){
+    .container{
+        width: 60em;
+    }
+    .card{
+        width: 58em;
+        position: relative;
+    }
+    #logo{
+        width: 8%;
+    }
+    h1{
+        font-size: 1.75em;
+    }
+    h2{
+        font-size: 0.8em;
+        margin: 0.75em auto;
+    }
+    #form{
+        margin: auto 7em;
+        margin-top: 1.5em;
+    }
+    input{
+        width: 150%;
+        font-size: 0.75em;
+    }
+    button{
+        width: 100%;
+        padding: 1em 2em;
+        font-size: 0.75em;
+    }
+    .error{
+        margin-top: 1em;
+        position: absolute;
+        left: 30em;
+    }
+    #dashboard{
+        width: 50%;
+        margin: 3em auto;
+    }
+    .socials{
+        margin-top: 1em;
+    }
+}
+
+@media(min-width:90em){
+    .container{
+        width: 90em;
+    }
+    .card{
+        width: 88em;
+    }
+    
+    #logo{
+        width: 7%;
+    }
+    h1{
+        font-size: 3em;
+    }
+    h2{
+        font-size: 1.25em;
+        margin: 1em auto;
+    }
+    #form{
+        margin-top: 1.5em;
+    }
+    input{
+        width: 180%;
+        font-size: 1em;
+    }
+    button{
+        width: 125%;
+        padding: 1.15em 2.5em;
+        font-size: 1em;
+    }
+    .error{
+        font-size: 0.75em;
+        left: 35em;
+    }
+    #dashboard{
+        width: 50%;
+        margin: 4em auto;
+    }
+    .socials{
+        margin-top: 1em;
+    }
+}
